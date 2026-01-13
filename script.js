@@ -1,29 +1,4 @@
-const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
-const icon = themeToggle.querySelector('i');
-
-const savedTheme = localStorage.getItem('theme');
-
-if (savedTheme === 'light') {
-    body.classList.remove('dark-mode');
-    icon.classList.replace('fa-sun', 'fa-moon');
-} else {
-    body.classList.add('dark-mode');
-    icon.classList.replace('fa-moon', 'fa-sun');
-}
-
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-
-    if (isDark) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('theme', 'light');
-    }
-});
 
 const revealElements = document.querySelectorAll('.reveal');
 
@@ -74,9 +49,11 @@ window.addEventListener('scroll', () => {
 });
 
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-mobileMenuBtn.addEventListener('click', () => {
-    console.log('Menu clicked');
-});
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        console.log('Menu clicked');
+    });
+}
 
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
