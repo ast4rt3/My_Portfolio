@@ -31,6 +31,21 @@ body.dark-mode {
     --nav-bg: rgba(15, 23, 42, 0.8);
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+        url('https://media0.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -129,8 +144,7 @@ h3,
     align-items: center;
     padding: 6rem 2rem;
     position: relative;
-    background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.1), transparent),
-        radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.1), transparent);
+    background: transparent;
 }
 
 .hero-grid {
@@ -141,6 +155,13 @@ h3,
     gap: 4rem;
     align-items: center;
     width: 100%;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 4rem;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .hero-left {
