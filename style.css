@@ -439,6 +439,7 @@ section {
 }
 
 .skills {
+    padding: 4rem 2rem;
     position: relative;
     z-index: 10;
 }
@@ -599,6 +600,84 @@ footer {
 
 .delay-2 {
     transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
+}
+
+.delay-4 {
+    transition-delay: 0.8s;
+}
+
+.delay-5 {
+    transition-delay: 1.0s;
+}
+
+.delay-6 {
+    transition-delay: 1.2s;
+}
+
+.delay-7 {
+    transition-delay: 1.4s;
+}
+
+.delay-8 {
+    transition-delay: 1.6s;
+}
+
+.delay-9 {
+    transition-delay: 1.8s;
+}
+
+.accounts {
+    padding: 4rem 2rem;
+}
+
+.accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.account-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 220px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.account-card:hover {
+    background: var(--bg-color);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.account-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.account-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.account-card span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
 @media (max-width: 968px) {
